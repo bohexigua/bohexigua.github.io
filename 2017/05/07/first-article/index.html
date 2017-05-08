@@ -140,6 +140,24 @@
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_Hans/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 
 
 
@@ -302,8 +320,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/05/07/first-article/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/07/first-article/" itemprop="commentCount"></span>
+                  <span class="post-comments-count fb-comments-count" data-href="http://yoursite.com/2017/05/07/first-article/" itemprop="commentCount">0</span> comments
                 </a>
               </span>
             
@@ -400,11 +417,11 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
+      <div class="fb-comments"
+           data-href="http://yoursite.com/2017/05/07/first-article/"
+           data-numposts="10"
+           data-width="100%"
+           data-colorscheme="light">
       </div>
     
   </div>
@@ -620,7 +637,7 @@
   
 
     
-      <script id="dsq-count-scr" src="https://说到.disqus.com/count.js" async></script>
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
     
@@ -631,7 +648,7 @@
           this.page.title = '一个新博客';
         };
         var d = document, s = d.createElement('script');
-        s.src = 'https://说到.disqus.com/embed.js';
+        s.src = 'https://.disqus.com/embed.js';
         s.setAttribute('data-timestamp', '' + +new Date());
         (d.head || d.body).appendChild(s);
       </script>
@@ -657,6 +674,10 @@
   
 
 
+
+
+
+  
 
 
 
