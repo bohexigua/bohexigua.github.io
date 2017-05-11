@@ -88,9 +88,6 @@
 
 
 
-  <meta property="fb:admins" content="<user_id>" />
-  <meta property="fb:app_id" content="<app_id>" />
-
 
 
 <meta name="description" content="学参天地，德合自然">
@@ -141,24 +138,6 @@
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '<app_id>',
-      xfbml      : true,
-      version    : 'v2.6'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/zh_Hans/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 
 
 
@@ -325,7 +304,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/05/07/first-article/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count fb-comments-count" data-href="http://yoursite.com/2017/05/07/first-article/" itemprop="commentCount">0</span> comments
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/05/07/first-article/" itemprop="commentCount"></span>
                 </a>
               </span>
             
